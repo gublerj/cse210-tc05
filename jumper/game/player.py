@@ -12,7 +12,7 @@ class Player:
 
         pass
 
-    def count_wrong(self,correct):
+    def count_wrong(self, correct):
         """
         count how many wrong guesses
         returns a number
@@ -31,7 +31,7 @@ class Player:
         pass
 
 
-    def loose():
+    def lose():
         """
         check if they lost
         """
