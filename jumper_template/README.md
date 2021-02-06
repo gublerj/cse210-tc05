@@ -35,3 +35,7 @@ root                    (project root folder)
 ## Authors
 ---
 * TODO: Add your names and emails here
+Brandon Perry: per18061@byui.edu
+Logan Moffett: moffettl@byui.edu
+Joshua Gubler: joshjgubler@gmail.com
+Kaushal Kafle: kaf17001@byui.edu
