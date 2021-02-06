@@ -60,8 +60,8 @@ class Puzzle:
         a '_' with the letter if it is
         """
         
-        for i in self.word():
-            if user_guess == self.word(i):
-                user_guess == self.blank(i)
+        for i in range(0, len(self.word)):
+            if user_guess == self.word[i]:
+                user_guess = self.blank[i]
 
         return self.blank
