@@ -47,12 +47,11 @@ class Puzzle:
 
         return boolean
         """
-
-        for letter in self.word:
-            if user_guess == letter:
+        count = 0
+        for x in range(0, len(self.word)):
+            if user_guess == self.word[x]:
                 return True
-            else:
-                return False
+        return False
 
     def update_array(self, user_guess):
         """
@@ -62,6 +61,8 @@ class Puzzle:
         
         for i in range(0, len(self.word)):
             if user_guess == self.word[i]:
-                user_guess = self.blank[i]
+                #user_guess = self.blank[i]
+                self.blank[i] = user_guess
+                print(self.blank[i])
 
         return self.blank
