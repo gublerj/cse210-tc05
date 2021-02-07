@@ -7,8 +7,9 @@ class Console:
         """
         Prints _ or correct letter for the guessed word from the array
         """   
-        for x in blank:
-            print(x)
+        for x in range(0, len(blank)):
+            print(f"{blank[x]} ", end = '')
+        print()
 
     
     def display_jumper(self, lives):
@@ -99,10 +100,9 @@ class Console:
 
 
 
-    def get_guess(self):
+    def get_guess(self, msg):
         """
         prompts user for guess
         """
-        self.guess = input("Guess a letter [a-z]: ")
 
-        return self.guess 
+        return input(msg) 
