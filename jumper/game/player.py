@@ -1,15 +1,17 @@
- """
- keep track of parachute
- check if player won/lost
 
- """
 
 class Player:
-        
+    """
+    keep track of parachute
+    check if player won/lost
+
+    """
     def __init__(self):
+        """Initializes the class
+        """
         self.lives = 5
 
-    def count_wrong(self,correct):
+    def count_lives(self,correct):
         """
         count how many wrong guesses
         returns a number
