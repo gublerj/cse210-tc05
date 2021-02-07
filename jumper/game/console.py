@@ -1,30 +1,108 @@
-"""
-prints things to the consol like:
-    picture of the jumper
-    the _ _ _ _ for the word with the correct letters filled in
 
-"""
 class Console:
-
-    def __init__():
+    def __init__(self):
         self.guess = ""
 
-    def display_word():
+    def display_word(self, blank):
         """
+        Prints _ or correct letter for the guessed word from the array
+        """   
+        for x in blank:
+            print(x)
 
-        """
-        pass
-
-    def display_jumper(self, life):
+    
+    def display_jumper(self, lives):
         """
         prints parachute to console based on how many wrong guesses they made
         if they lose tell them
         """
+        stages = [
+                    """
+                     _____
+                    /_____\\
+                    \     /               
+                     \   /
+                       0
+                      /|\\
+                      / \\
 
-    def get_guess(self, msg):
+                    ^^^^^^^
+                    """
+                    ,
+
+                     """
+
+                    /_____\\
+                    \     /               
+                     \   /
+                       0
+                      /|\\
+                      / \\
+
+                    ^^^^^^^
+                    """
+                    ,
+
+                     """
+
+                    \     /               
+                     \   /
+                       0
+                      /|\\
+                      / \\
+
+                    ^^^^^^^
+                    """
+                    ,
+
+                     """
+                               
+                     \   /
+                       0
+                      /|\\
+                      / \\
+
+                    ^^^^^^^
+                    """
+                    ,
+
+                     """
+                       0
+                      /|\\
+                      / \\
+
+                    ^^^^^^^
+                    """
+                    ,
+
+                    """
+                       x
+                      /|\\
+                      / \\
+
+                    ^^^^^^^
+                    """
+        ]
+
+        if lives == 5:
+            print(stages[0])
+        elif lives == 4:
+            print(stages[1])
+        elif lives == 3:
+            print(stages[2])
+        elif lives == 2:
+            print(stages[3])
+        elif lives == 1:
+            print(stages[4])
+        else:
+            print(stages[5])
+
+
+
+    def get_guess(self):
         """
         prompts user for guess
         """
+        self.guess = input("Guess a letter [a-z]: ")
 
-        return input(msg)
-        pass
+        return self.guess 
