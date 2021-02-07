@@ -17,6 +17,7 @@ class Director:
         self.is_correct_guess = False
         self.lives = 5
         self.guess = ''
+        self.game_keep_playing = True
 
     def start_game(self):
         """
@@ -25,10 +26,13 @@ class Director:
         It starts with self.do_outputs before entering loop to initialize the puzzle
         """
         self.do_outputs()
-        while self.player.loose() == False or self.player.win == False:
+        #while self.player.loose() == False or self.player.win == False:
+        #while self.player.win(self.word, self.guesses) == True or self.player.loose() == False:
+        while self.game_keep_playing == True:
             self.get_inputs()
             self.do_updates()
             self.do_outputs()
+            self.keep_playing()
     
     def get_inputs(self):
         """
@@ -50,6 +54,16 @@ class Director:
         """
         self.console.display_word(self.guesses)
         self.console.display_jumper(self.lives)
+    
+    def keep_playing(self):
+        """
+        This will determin if the game keeps going
+        """
+        if self.player.win(self.word, self.guesses) == True:
+            self.game_keep_playing = False
+        if self.player.loose() == False:
+            print("ran")
+            self.game_keep_playing = False
 
 
 
