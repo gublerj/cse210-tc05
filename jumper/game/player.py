@@ -27,7 +27,11 @@ class Player:
         check if they won
     
         """
-        if actual_word == guessed_word:
+        check_status = 0
+        for x in range(0, len(actual_word)):
+            if actual_word[x] == guessed_word[x]:
+                check_status = check_status + 1
+        if check_status == len(actual_word):
             return True
         else:
             return False
@@ -37,7 +41,7 @@ class Player:
         """
         check if they lost
         """
-        if self.lives < 1:
+        if self.lives > 0:
             return True
         else:
             return False
